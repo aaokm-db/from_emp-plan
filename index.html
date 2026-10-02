@@ -2,21 +2,36 @@
 <html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
+    <!-- وسم الـ Viewport الأساسي لدعم استجابة الجوال -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>خطة التوظيف | تحفيظ الشرقية</title>
     <link rel="icon" type="image/png" href="https://lh3.googleusercontent.com/d/1FL7yn7leRCwTkoPWJfjQIeayVVpn48Wy">
+    
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        html, body {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden; /* لمنع ظهور شريطي سحب مزدوجين على الجوال */
+            -webkit-overflow-scrolling: touch;
+        }
+        iframe {
+            width: 100%;
+            height: 100%;
+            height: 100dvh; /* ضبط الارتفاع الديناميكي لشاشات الجوال */
+            border: none;
+            display: block;
+        }
+    </style>
 </head>
 <body>
+
     <iframe src="https://script.google.com/macros/s/AKfycbyb2k8XstQqk0WYSHyS78-LzSgN5-g8AnhnpGiyyd54wEiLozT0mipEirzIpvsUyPbvNQ/exec"
-            width="100%"
-            height="100%"
-            allowfullscreen="true"
-            style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; border: none;"></iframe>
-    <script>
-        window.onload = function() {
-            document.querySelector('iframe').requestFullscreen().catch((err) => {
-                console.error(`Error attempting to enable full-screen mode: ${err.message}`);
-            });
-        };
-    </script>
+            allowfullscreen="true"></iframe>
+
 </body>
 </html>
